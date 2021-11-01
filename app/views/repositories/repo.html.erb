@@ -1,0 +1,11 @@
+<% if @result %>
+  <h4>Repo Name: </h4> <p><%= @result["name"] %></p>
+  <h4>Username: </h4><p><%= @result["owner"]["login"] %></p>
+  <h4>Language: </h4><p><%= @result["language"] %></p>
+  <h4>URL: </h4><a href=<%= @result["html_url"] %>><%= @result["html_url"] %></a>
+<% else %>
+  <h3>Sorry but the repository "<%=@repo%>" in combination with the user "<%=@user%>" does not exist.</h3>
+<% end %>
+<br>
+<br>
+<strong>**<%= link_to "Search again", root_path %>**</strong>

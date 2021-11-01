@@ -1,0 +1,15 @@
+<%= form_tag result_path, method: :get do %>
+  <%= text_field_tag :user,
+    params[:user],
+    class: "form-control",
+    placeholder: "Username"
+  %>
+  <%= text_field_tag :repo,
+    params[:repo],
+    class: "form-control",
+    placeholder: "Repository"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
